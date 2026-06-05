@@ -271,19 +271,23 @@
 
         /* Individual Page Grid: Splitting textual summary and asset pair layout */
         .individual-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .project-visuals {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            grid-template-columns: 1fr 1fr; /* Keeps static image and GIF side-by-side */
+            gap: 1.5rem;
+            width: 100%;
+            margin-top: 1rem;
         }
 
-        .visual-box {
-            height: 220px;
+        .visual-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Change to 'contain' if you don't want any cropping */
         }
 
         /* Team Page Layout: Main section plus Embedded Video Container */
@@ -474,46 +478,50 @@
                 <h2 class="section-title">Individual Work</h2>
                 
                 <div class="project-list">
-                    <!-- Project Block Placeholder 1 -->
+                    <!-- Project Block 1: DFS 1 -->
                     <div class="project-card">
                         <div class="individual-layout">
+                            <!-- Text content wrapper -->
                             <div>
                                 <h3 class="project-meta-title">DFS 1</h3>
                                 <p class="placeholder-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed sodales justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                 <p class="placeholder-paragraph">Cras quis varius velit. Integer aliquet dictum dolor, sed sodales lectus sodales vel. Cras ac leo eget tellus elementum elementum eu vitae turpis.</p>
-                                <div style="margin-top: 2rem;">
+                                <div style="margin-top: 1.5rem;">
                                     <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Project &rarr;</a>
                                 </div>
                             </div>
                             
+                            <!-- Visuals now sit directly below the text and button -->
                             <div class="project-visuals">
                                 <div class="media-placeholder visual-box">
-                                    <img src="Data/Images/Construction.jpg" alt="Project Banner" class="hero-src-image">
+                                    <img src="Data/Images/Construction.jpg" alt="Project Banner">
                                 </div>
                                 <div class="media-placeholder visual-box">
-                                    <img src="Data/Images/Construction2.avif" alt="Project Banner" class="hero-src-image">
+                                    <img src="Data/Images/Construction2.avif" alt="Project Banner">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project Block Placeholder 2 -->
+                    <!-- Project Block 2: Doomenstein -->
                     <div class="project-card">
                         <div class="individual-layout">
+                            <!-- Text content wrapper -->
                             <div>
                                 <h3 class="project-meta-title">Doomenstein</h3>
                                 <p class="placeholder-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet magna. In elementum lectus ac convallis tincidunt. Suspendisse non eleifend lacus. Curabitur hendrerit scelerisque nunc nec varius.</p>
-                                <div style="margin-top: 2rem;">
+                                <div style="margin-top: 1.5rem;">
                                     <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Project &rarr;</a>
                                 </div>
                             </div>
                             
+                            <!-- Visuals now sit directly below the text and button -->
                             <div class="project-visuals">
                                 <div class="media-placeholder visual-box">
-                                    <img src="Data/Images/Doomenstein Example.png" alt="Project Banner" class="hero-src-image">
+                                    <img src="Data/Images/Doomenstein Example.png" alt="Project Banner">
                                 </div>
                                 <div class="media-placeholder visual-box">
-                                    <img src="Data/GIFS/DoomensteinGIF.gif" alt="Project Banner" class="hero-src-image">
+                                    <img src="Data/GIFS/DoomensteinGIF.gif" alt="Project Banner">
                                 </div>
                             </div>
                         </div>
