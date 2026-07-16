@@ -628,16 +628,33 @@
                             </div>
 
                             <!-- Embedded Video System Frame Integration Location -->
-                            <div class="video-container">
-                               <iframe 
-                                    src="https://www.youtube.com/embed/TZ2RDEJh5Yc" 
-                                    title="YouTube video player" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                    referrerpolicy="strict-origin-when-cross-origin" 
-                                    allowfullscreen>
-                                </iframe>
+                            <div class="video-container" id="video-player">
+                                <img
+                                    src="https://i.ytimg.com/vi/TZ2RDEJh5Yc/maxresdefault.jpg"
+                                    alt="Watch our video"
+                                    class="video-thumbnail">
+                            
+                                <button class="play-button" aria-label="Play video">
+                                    ▶
+                                </button>
                             </div>
+                            
+                            <script>
+                            const container = document.getElementById("video-player");
+                            
+                            container.addEventListener("click", () => {
+                                container.innerHTML = `
+                                    <iframe
+                                        src="https://www.youtube.com/embed/TZ2RDEJh5Yc?autoplay=1"
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                    </iframe>
+                                `;
+                            });
+                            </script>
                         </div>
                     </div>
                 </div>
