@@ -558,6 +558,33 @@
 
                             <!-- Embedded Video System Frame Integration Location -->
                             <div class="video-container">
+                                <div class="video-container" id="video-player">
+                                    <img
+                                        src="https://i.ytimg.com/vi/z1M_F7jhu7s/maxresdefault.jpg"
+                                        alt="Watch our video"
+                                        class="video-thumbnail">
+                                
+                                    <button class="play-button" aria-label="Play video">
+                                        ▶
+                                    </button>
+                                </div>
+                                
+                                <script>
+                                const container = document.getElementById("video-player");
+                                
+                                container.addEventListener("click", () => {
+                                    container.innerHTML = `
+                                        <iframe
+                                            src="https://www.youtube.com/embed/z1M_F7jhu7s?autoplay=1"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen>
+                                        </iframe>
+                                    `;
+                                });
+                                </script>
                                 <iframe 
                                     src="https://www.youtube.com/embed/z1M_F7jhu7s" 
                                     title="YouTube video player" 
