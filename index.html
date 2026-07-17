@@ -12,7 +12,7 @@
             --bg-secondary: #80CBC4;
             --bg-tertiary: #629c96;
             --background: #a9d4d0;
-            --border-color: #86bab5;
+            --border-color: #c8cccc;
             --text-primary: #0f172a;
             --text-secondary: #475569;
             --text-muted: #94a3b8;
@@ -128,8 +128,8 @@
         .navbar {
             position: sticky;
             top: 0;
-            background-color: --background;
-            color: --background;
+            background-color: var(--background);
+            color: var(--background);
             backdrop-filter: blur(8px);
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
@@ -137,7 +137,7 @@
 
         .nav-container {
             display: flex;
-            color: --background;
+            color: var(--background);
             justify-content: space-between;
             align-items: center;
             height: 70px;
